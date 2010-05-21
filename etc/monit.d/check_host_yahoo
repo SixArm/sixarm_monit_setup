@@ -1,0 +1,2 @@
+check host www.yahoo.com with address www.yahoo.com
+  if failed icmp type echo count 3 with timeout 3 seconds then alert

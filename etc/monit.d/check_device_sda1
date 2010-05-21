@@ -1,0 +1,11 @@
+check device sda1 with path /dev/sda1
+  start program  = "/bin/mount /dev/sda1"
+  stop program  = "/bin/umount /dev/sda1"
+  if failed permission 660 then unmonitor
+  if failed uid root then unmonitor
+  if failed gid disk then unmonitor
+  if space usage > 80% then alert
+  if space usage > 98% then stop
+  if inode usage > 40% then alert
+  if inode usage > 98% then stop
+  group server

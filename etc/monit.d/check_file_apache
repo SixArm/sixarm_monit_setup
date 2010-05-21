@@ -1,0 +1,7 @@
+check file apache_executable with path /usr/sbin/apache2
+# if failed checksum and
+#   expect the sum 2a8dbfe532d488e6b99124b5d313fe8a then unmonitor
+  if failed permission 755 then unmonitor
+  if failed uid root then unmonitor
+  if failed gid root then unmonitor
+  group server

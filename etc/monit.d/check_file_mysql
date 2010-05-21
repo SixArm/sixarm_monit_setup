@@ -1,0 +1,7 @@
+check file mysql_executable with path /usr/bin/mysql
+# if failed checksum and
+#   expect the sum 8aee3a326dc80341b032cabe198bd6f2 then unmonitor
+  if failed permission 755 then unmonitor
+  if failed uid root then unmonitor
+  if failed gid root then unmonitor
+  group server

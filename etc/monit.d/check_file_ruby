@@ -1,0 +1,7 @@
+check file ruby_executable with path /usr/local/ruby-enterprise/bin/ruby
+# if failed checksum and
+#   expect the sum c8b1e834ce040299c7dc01e1ae635379 then unmonitor
+  if failed permission 755 then unmonitor
+  if failed uid root then unmonitor
+  if failed gid root then unmonitor
+  group server
